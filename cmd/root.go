@@ -1,6 +1,3 @@
-/*
-Copyright © 2025 NAME HERE adrian.mcmichael@gmail.com
-*/
 package cmd
 
 import (
