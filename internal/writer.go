@@ -6,6 +6,7 @@ import (
 	"github.com/gocolly/colly"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type MarkdownWriter struct {
@@ -97,7 +98,8 @@ func (w *MarkdownWriter) writeFileHeader(link Link, file *os.File) error {
 		return fmt.Errorf("error writing to file %s: %w", w.baseFolder, err)
 	}
 	if link.Description() != "" {
-		_, err = file.WriteString(fmt.Sprintf("description: \"%s\"\n", link.Description()))
+		escapedDescription := strings.TrimSpace(strings.Replace(link.Description(), `"`, `\"`, -1))
+		_, err = file.WriteString(fmt.Sprintf("description: \"%s\"\n", escapedDescription))
 		if err != nil {
 			return fmt.Errorf("error writing to file %s: %w", w.baseFolder, err)
 		}
