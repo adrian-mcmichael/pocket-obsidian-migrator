@@ -1,6 +1,6 @@
 module github.com/adrian-mcmichael/pocket-obsidian-migrator
 
-go 1.24
+go 1.25.0
 
 require (
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.3.3
@@ -9,7 +9,7 @@ require (
 	github.com/gocolly/colly v1.2.0
 	github.com/spf13/cobra v1.9.1
 	go.uber.org/zap v1.27.0
-	golang.org/x/sync v0.14.0
+	golang.org/x/sync v0.20.0
 )
 
 require (
@@ -27,8 +27,8 @@ require (
 	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/temoto/robotstxt v1.1.2 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/net v0.40.0 // indirect
-	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 )
